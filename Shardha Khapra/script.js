@@ -1,8 +1,30 @@
-let items = [250, 645, 300, 900, 50];
+// let h2 = document.querySelector("h2");
+// console.dir(h2.innerText);
 
-let i = 0;
-for(let val of items){
-    console.log(`value at index ${items[i]}`);
-    i++;
-    
+// h2.innerText = h2.innerText + " from Apna College Students";
+
+
+let divs = document.querySelectorAll(".box");
+
+let idx = 1;
+for(div of divs){
+    div.innerText = `new unique value ${idx}`;
+    idx++;
 }
+
+
+
+
+
+
+
+
+
+
+// for(div of divs){
+//     console.log(div.innerText);
+// }
+
+// divs[0].innerText = "new unique value 0"
+// divs[1].innerText = "new unique value 1"
+// divs[2].innerText = "new unique value 2"
