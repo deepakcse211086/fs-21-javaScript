@@ -1,30 +1,8 @@
-// let h2 = document.querySelector("h2");
-// console.dir(h2.innerText);
+let btn1 = document.querySelector("#btn1");
 
-// h2.innerText = h2.innerText + " from Apna College Students";
-
-
-let divs = document.querySelectorAll(".box");
-
-let idx = 1;
-for(div of divs){
-    div.innerText = `new unique value ${idx}`;
-    idx++;
+btn1.onclick = () => {
+    console.log("btn1 was clicked");
+    let a = 25;
+    a++;
+    console.log(a);
 }
-
-
-
-
-
-
-
-
-
-
-// for(div of divs){
-//     console.log(div.innerText);
-// }
-
-// divs[0].innerText = "new unique value 0"
-// divs[1].innerText = "new unique value 1"
-// divs[2].innerText = "new unique value 2"

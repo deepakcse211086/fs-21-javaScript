@@ -1,19 +1,24 @@
-let btn = document.getElementById("button");
-let text = document.getElementById("")
+let data = [];
+let fname = document.querySelector(".fname");
+let lname = document.querySelector(".lname");
+let pcountry = document.querySelector(".country");
+let pscore = document.querySelector(".fname");
+let button = document.querySelector("button");
 
-function addNotes(){
-    let div = document.createElement("div");
-    let p = document.createElement("p");
-    let cross_btn = document.createElement("button");
-    
-    div.appendChild(p);
-    div.appendChild(cross_btn);
+button.addEventListener(`click`, function(e){
+    e.preventDefault();
 
-
-    cross_btn.innerText = "X";
-    p.innerText = text.value;
-
-    console.log(div);
-}
-
-btn.addEventListener("click", addNotes);
+    if(lname.value==="" || fname.value==="" || pcountry.value==="" || pscore.value===""){
+        alert("please fill all the fields");
+    }else{
+        let playerObj = {
+            fname: fname.value,
+            lname: lname.value,
+            country: pcountry.value,
+            score: pscore.value
+        }
+        data.push(playerObj);
+        updateDataOnUI();
+        console.log(data);
+    }
+})
